@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Fade to Black
+Comment=A 3D sci-fi action/adventure game
+Icon=io.github.fpiesche.f2bgl
+Exec=f2bgl
+Categories=Game;ActionGame;Shooter
