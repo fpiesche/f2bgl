@@ -303,7 +303,7 @@ int main(int argc, char *argv[]) {
 	if (!window) {
 		return -1;
 	}
-	SDL_Surface *icon = SDL_LoadBMP(*kIconBmp);
+	SDL_Surface *icon = SDL_LoadBMP(kIconBmp);
 	if (icon) {
 		SDL_SetWindowIcon(window, icon);
 		SDL_FreeSurface(icon);
