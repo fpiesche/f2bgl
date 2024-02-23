@@ -1,46 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component>
-  <id type="desktop">io.github.fpiesche.f2bgl</id>
+  <id>io.github.fpiesche.f2bgl</id>
   <launchable type="desktop-id">io.github.fpiesche.f2bgl.desktop</launchable>
   <name>Fade to Black</name>
-  <developer id="cyxdown.free.fr">
-    <name>Grégory Montoir</name>
-    <contact>cyx@users.sourceforge.net</contact>
-  </developer>
   <developer id="yellowkeycard.net">
     <name>Florian Piesche</name>
-    <contact>florian@yellowkeycard.net</contact>
+    <contact>https://github.com/fpiesche/</contact>
   </developer>
   <summary>Modernised cross-platform port of the 1995 Delphine Software game</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0</project_license>
   <url type="homepage">https://github.com/fpiesche/f2bgl</url>
   <description>
-      <p>f2bgl is a modernised, reverse-engineered port of the 1995 Delphine Software game Fade to Black, the sequel to Flashback.</p>
+      <p>F2BGL is a modernised, reverse-engineered port of the 1995 Delphine Software game Fade to Black, the sequel to Flashback.</p>
   </description>
   <screenshots>
     <screenshot type="default">
-      <image type="source">https://media.moddb.com/images/games/1/17/16430/Who_goes_there.png</image>
-      <caption>Episode 5: Who goes there?</caption>
+      <image type="source">https://raw.githubusercontent.com/fpiesche/f2bgl/master/meta/screenshot_cell.png</image>
+      <caption>The start of the game: Breaking out of your cell</caption>
     </screenshot>
     <screenshot>
-      <image type="source">https://media.moddb.com/images/games/1/17/16430/amc0012.png</image>
-      <caption>Episode 4: A mystic library</caption>
-    </screenshot>
-    <screenshot>
-      <image type="source">https://media.moddb.com/images/games/1/17/16430/amc0013.png</image>
-      <caption>Episode 4: Spaceship hangar</caption>
-    </screenshot>
-    <screenshot>
-      <image type="source">https://media.moddb.com/images/games/1/17/16430/Triton.png</image>
-      <caption>Episode 5</caption>
+      <image type="source">https://raw.githubusercontent.com/fpiesche/f2bgl/master/meta/screenshot_intro.png</image>
+      <caption>Intro video in windowed mode</caption>
     </screenshot>
   </screenshots>
   <categories>
     <category>Game</category>
   </categories>
   <releases>
-      <release version="1.0" date="2011-12-24"><description><p>The original release of The AMC Squad, then known as "AMC TC".</p></description></release>
+      <release version="1.0" date="2024-02-23"><description><p>The original Flatpak release of f2bgl.</p></description></release>
   </releases>
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">intense</content_attribute>
