@@ -7,6 +7,7 @@
 #include <ctype.h>
 #include <stdio.h>
 #include <string.h>
+#include <version.h>
 #include "stub.h"
 
 const char *g_caption = "Fade2Black/OpenGL";
@@ -277,6 +278,7 @@ static int transformPointerY(int y) {
 }
 
 int main(int argc, char *argv[]) {
+	printf("f2bgl version %s (%s %s)\n", FULL_VERSION, __DATE__, __TIME__);
 	GameStub *stub = GameStub_create();
 	if (!stub) {
 		return -1;
