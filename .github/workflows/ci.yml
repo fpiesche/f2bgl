@@ -1,0 +1,110 @@
+name: CI build
+
+on:
+  push:
+   branches:
+     - main
+
+  pull_request:
+   branches:
+     - main
+
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  build-linux:
+    name: ${{ matrix.build.name }}
+    strategy:
+      fail-fast: false
+      matrix:
+        build:
+          - runner: ubuntu-latest
+            name: sid
+            container: debian:sid
+            dependencies: >
+              build-essential git cmake ninja-build lsb-release wget
+              libopengl-dev libfluidsynth-dev zlib1g-dev libwildmidi-dev libsdl2-dev
+          - runner: ubuntu-latest
+            name: appimage
+            dependencies: >
+              build-essential git cmake ninja-build lsb-release wget file
+              libopengl-dev libfluidsynth-dev zlib1g-dev libwildmidi-dev libsdl2-dev
+            container: debian:sid
+            cmake-args: "-DAPPIMAGE=ON"
+          - runner: ubuntu-latest
+            name: fc42
+            container: fedora:42
+            dependencies: >
+              g++ git cmake ninja-build lsb_release wget
+              fluidsynth-devel zlib-ng-compat-devel wildmidi-devel SDL2-devel
+            cmake-args: ""
+          - runner: ubuntu-latest
+            name: fc43
+            container: fedora:43
+            dependencies: >
+              g++ git cmake ninja-build lsb_release wget
+              fluidsynth-devel zlib-ng-compat-devel wildmidi-devel SDL2-devel
+            cmake-args: ""
+          - runner: ubuntu-latest
+            name: fc44
+            container: fedora:44
+            dependencies: >
+              g++ git cmake ninja-build lsb_release wget
+              fluidsynth-devel zlib-ng-compat-devel wildmidi-devel SDL2-devel
+            cmake-args: ""
+          - runner: ubuntu-latest
+            name: fc45
+            container: fedora:45
+            dependencies: >
+              g++ git cmake ninja-build lsb_release wget
+              fluidsynth-devel zlib-ng-compat-devel wildmidi-devel SDL2-devel
+            cmake-args: ""
+    runs-on: ubuntu-latest
+    container:
+      image: ${{ matrix.build.container }}
+      options: --device /dev/fuse --cap-add SYS_ADMIN --privileged
+    steps:
+      - name: Install dependencies
+        shell: bash
+        run: |
+          if [[ ${{ matrix.build.name }} == "fc"* ]]; then
+            dnf install -y ${{ matrix.build.dependencies }}
+          else
+            apt-get update
+            apt-get install -y ${{ matrix.build.dependencies }}
+            if [[ ${{ matrix.build.name }} == "appimage" ]]; then
+              apt install -y binutils coreutils desktop-file-utils fakeroot \
+                libfuse2 libgdk-pixbuf-2.0-dev patchelf python3-pip python3-setuptools \
+                squashfs-tools strace util-linux zsync appstream
+            fi
+            echo "::endgroup::"
+            echo "::group::appimagetool"
+            wget https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage -O /usr/local/bin/appimagetool
+            chmod +x /usr/local/bin/appimagetool
+          fi
+
+      - name: Clone Repository
+        uses: actions/checkout@v6
+
+      - name: Build and Package
+        shell: bash
+        run: |
+          echo "::group::Configure"
+          git config --global --add safe.directory $(pwd)
+          cmake -B build -G Ninja ${{ matrix.build.cmake-args }} .
+          echo "::endgroup::"
+          echo "::group::Build"
+          cmake --build build
+          echo "::endgroup::"
+          echo "::group::Package"
+          cd build
+          cpack
+          rm -rf _CPack_Packages
+          echo "::endgroup::"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: f2bgl-${{ matrix.build.name }}
+          path: build/dist/*.*
