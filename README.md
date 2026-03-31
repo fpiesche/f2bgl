@@ -1,24 +1,20 @@
-
-f2bgl README
-Release version: 0.3.1
--------------------------------------------------------------------------------
+# f2bgl
 
 
-About:
-------
+## About
 
-f2bgl is a re-implementation of the engine used in the game Fade To Black
-made by Delphine Software and released in 1995.
+f2bgl is a re-implementation of the engine for the 1995 game "Fade To Black"
+by Delphine Software, originally reverse engineered by Grégory "cyxx" Montoir.
 
 
-Running:
---------
+## Running
 
 You will need the original files of the PC release or PC demo.
 
 By default, the program will try to load the game data files from the current
 directory. The expected directory structure is :
 
+```
 	DELPHINE.INI
 	TRIGO.DAT    - optional
 	DATA/
@@ -27,10 +23,12 @@ directory. The expected directory structure is :
 	INSTDATA/    - optional
 	TEXT/        - not present with demo version
 	VOICE/       - not present with demo version
+```
 
 Defaults can be changed using command line switches :
 
-    Usage: f2b [OPTIONS]...
+```
+    Usage: f2bgl [OPTIONS]...
     --datapath=PATH             Path to data files (default '.')
     --language=EN|FR|GR|SP|IT   Language files to use (default 'EN')
     --playdemo                  Use inputs from .DEM files
@@ -46,16 +44,16 @@ Defaults can be changed using command line switches :
     --mouse                     Enable mouse controls
     --no-fog                    Disable fog rendering
     --no-gouraud                Disable gouraud shading
+```
 
-
-Controls:
----------
+## Controls
 
 The game can be played using a joystick, a gamepad or the keyboard.
 Key mappings can be changed by editing the file 'controls.cfg'.
 
-In-game keys (default) :
+In-game keys (default):
 
+```
     Arrow Keys     move Conrad
     Alt / V        toggle gun mode
     Shift          walk (or steps)
@@ -74,15 +72,4 @@ In-game keys (default) :
     + and -        change game state save slot
     F1             toggle fog on/off
     F2             toggle flat/gouraud shading
-
-
-Credits:
---------
-
-Delphine Software for creating the game.
-
-
-Contact:
---------
-
-Gregory Montoir, cyx@users.sourceforge.net
+```
