@@ -3,16 +3,17 @@
   <id>net.yellowkeycard.f2bgl</id>
   <name>Fade to Black</name>
   <developer id="net.yellowkeycard.f2bgl">
-    <name>Grégory Montoir;f2bgl Contributors</name>
-    <url>https://github.com/fpiesche/f2bgl/graphs/contributors</url>
+    <name>Grégory Montoir; f2bgl Contributors</name>
+    <url>https://git.yellowkeycard.net/outrider/f2bgl/activity/contributors</url>
   </developer>
   <summary>A modern cross-platform port of Fade to Black</summary>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-2.0</project_license>
-  <url type="homepage">https://git.yellowkeycard.net/outrider/f2bgl/</url>
-  <url type="vcs-browser">https://git.yellowkeycard.net/outrider/f2bgl/</url>
+  <project_license>LicenseRef-Proprietary</project_license>
+  <url type="homepage">https://git.yellowkeycard.net/outrider/f2bgl</url>
+  <url type="vcs-browser">https://git.yellowkeycard.net/outrider/f2bgl</url>
   <description>
-    <p>A reimplementation of the engine for Fade to Black.</p>
+    <p>f2bgl is a rewrite of the engine used in the game Fade To Black made by Delphine Software.</p>
+    <p>It is designed as a cross-platform replacement for the original DOS executable.</p>
   </description>
   <screenshots>
     <screenshot type="default">
@@ -50,7 +51,29 @@
   </screenshots>
   <categories>
     <category>Game</category>
+    <category>ActionGame</category>
+    <category>Shooter</category>
   </categories>
+  <supports>
+    <control>keyboard</control>
+  </supports>
+  <recommends>
+    <control>gamepad</control>
+  </recommends>
+  <requires>
+    <internet>offline-only</internet>
+  </requires>
+  <provides>
+    <binary>f2bgl</binary>
+  </provides>
+  <keywords>
+    <keyword>retro</keyword>
+    <keyword>fade to black</keyword>
+    <keyword>delphine</keyword>
+  </keywords>
+  <content_rating type="oars-1.1">
+    <content_attribute id="violence-fantasy">moderate</content_attribute>
+  </content_rating>
   <releases>
     <release version="1.0.3" date="2026-03-31"><description><p>Add vcs-browser appstream metadata.</p></description></release>
     <release version="1.0.2" date="2024-10-05"><description><p>Improve metadata.</p></description></release>
@@ -240,7 +263,4 @@
       </description>
     </release>
   </releases>
-  <content_rating type="oars-1.1">
-    <content_attribute id="violence-fantasy">moderate</content_attribute>
-  </content_rating>
 </component>
