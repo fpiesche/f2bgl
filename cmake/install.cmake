@@ -1,14 +1,21 @@
 include(GNUInstallDirs)
 
+install(TARGETS f2bgl
+        DESTINATION ${CMAKE_INSTALL_BINDIR}
+        PERMISSIONS WORLD_READ WORLD_EXECUTE
+                GROUP_READ GROUP_EXECUTE
+                OWNER_READ OWNER_WRITE OWNER_EXECUTE
+)
+
 if(UNIX AND NOT APPLE)
-    install(TARGETS f2bgl
-            DESTINATION ${CMAKE_INSTALL_BINDIR}
-            PERMISSIONS WORLD_READ WORLD_EXECUTE
-                        GROUP_READ GROUP_EXECUTE
-                        OWNER_READ OWNER_WRITE OWNER_EXECUTE
-    )
     install(FILES ${DIST_PATH}/${FREEDESKTOP_APP_ID}.svg
             DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/scalable/apps/
+            PERMISSIONS WORLD_READ
+                        GROUP_READ
+                        OWNER_READ OWNER_WRITE OWNER_EXECUTE
+    )
+    install(FILES ${DIST_PATH}/${FREEDESKTOP_APP_ID}.png
+            DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/256x256/apps/
             PERMISSIONS WORLD_READ
                         GROUP_READ
                         OWNER_READ OWNER_WRITE OWNER_EXECUTE
