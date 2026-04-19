@@ -7,7 +7,7 @@ if(UNIX AND NOT APPLE)
                         GROUP_READ GROUP_EXECUTE
                         OWNER_READ OWNER_WRITE OWNER_EXECUTE
     )
-    install(FILES ${LINUX_PKG_PATH}/${FREEDESKTOP_APP_ID}.svg
+    install(FILES ${DIST_PATH}/${FREEDESKTOP_APP_ID}.svg
             DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/scalable/apps/
             PERMISSIONS WORLD_READ
                         GROUP_READ

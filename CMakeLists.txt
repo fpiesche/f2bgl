@@ -7,8 +7,9 @@ endif()
 
 project(f2bgl VERSION 1.0.3 LANGUAGES CXX)
 
-set(LINUX_PKG_PATH "${CMAKE_CURRENT_SOURCE_DIR}/meta")
-set(FREEDESKTOP_APP_ID "io.github.fpiesche.f2bgl")
+set(DIST_PATH "${CMAKE_SOURCE_DIR}/dist")
+set(LINUX_PKG_PATH "${DIST_PATH}/linux")
+set(FREEDESKTOP_APP_ID "net.yellowkeycard.f2bgl")
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 include(git_version)

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+  <id>net.yellowkeycard.f2bgl</id>
+  <name>Fade to Black</name>
+  <developer id="net.yellowkeycard.f2bgl">
+    <name>Grégory Montoir;f2bgl Contributors</name>
+    <url>https://github.com/fpiesche/f2bgl/graphs/contributors</url>
+  </developer>
+  <summary>A modern cross-platform port of Fade to Black</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0</project_license>
+  <url type="homepage">https://git.yellowkeycard.net/outrider/f2bgl/</url>
+  <url type="vcs-browser">https://git.yellowkeycard.net/outrider/f2bgl/</url>
+  <description>
+    <p>A reimplementation of the engine for Fade to Black.</p>
+  </description>
+  <screenshots>
+    <screenshot type="default">
+      <image type="source">https://cdn.jsdelivr.net/gh/fpiesche/f2bgl/main/meta/screenshot_cell.png</image>
+      <caption>The start of the game: Breaking out of your cell</caption>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://cdn.jsdelivr.net/gh/fpiesche/f2bgl/main/meta/screenshot_intro.png</image>
+      <caption>Intro video in windowed mode</caption>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://cdn.jsdelivr.net/gh/fpiesche/flatpak-builds/apps/net.yellowkeycard.f2bgl/screenshots/level4b.png</image>
+      <caption>Level 4</caption>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://cdn.jsdelivr.net/gh/fpiesche/flatpak-builds/apps/net.yellowkeycard.f2bgl/screenshots/level1.png</image>
+      <caption>Level 1</caption>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://cdn.jsdelivr.net/gh/fpiesche/flatpak-builds/apps/net.yellowkeycard.f2bgl/screenshots/level3.png</image>
+      <caption>Level 3</caption>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://cdn.jsdelivr.net/gh/fpiesche/flatpak-builds/apps/net.yellowkeycard.f2bgl/screenshots/level2a.png</image>
+      <caption>Level 2</caption>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://cdn.jsdelivr.net/gh/fpiesche/flatpak-builds/apps/net.yellowkeycard.f2bgl/screenshots/level2b.png</image>
+      <caption>Level 2</caption>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://cdn.jsdelivr.net/gh/fpiesche/flatpak-builds/apps/net.yellowkeycard.f2bgl/screenshots/level6b.png</image>
+      <caption>Level 6</caption>
+    </screenshot>
+  </screenshots>
+  <categories>
+    <category>Game</category>
+  </categories>
+  <releases>
+    <release version="1.0.3" date="2026-03-31"><description><p>Add vcs-browser appstream metadata.</p></description></release>
+    <release version="1.0.2" date="2024-10-05"><description><p>Improve metadata.</p></description></release>
+    <release version="1.0.1" date="2024-10-04"><description><p>Improve icon.</p></description></release>
+    <release version="1.0" date="2024-02-23"><description><p>The original Flatpak release of f2bgl.</p></description></release>
+    <release version="0.3.1" date="2019-12-26">
+      <description>
+        <ul>
+          <li>fixed memory leak with sounds</li>
+          <li>removed dependency on FFmpeg</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.3.0" date="2018-05-11">
+      <description>
+        <ul>
+          <li>added support for PSX static bitmaps and cutscenes</li>
+          <li>fixed collision bounding boxes</li>
+          <li>fixed duplicate shoot messages</li>
+          <li>fixed music not restarted when loading savestate</li>
+          <li>fixed possible lockup when switching cameras</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.2.7" date="2018-03-13">
+      <description>
+        <ul>
+          <li>added configuration file for controls mapping</li>
+          <li>fixed glitches with pre-calculated shadows</li>
+          <li>fixed possible memory corruption in saveload menu</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.2.6" date="2018-03-08">
+      <description>
+        <ul>
+          <li>fixed screen blinking when hit</li>
+          <li>fixed multiline subtitles position</li>
+          <li>improved overlay graphics performance</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.2.5" date="2018-03-05">
+      <description>
+        <ul>
+          <li>fixed game framerate to match original</li>
+          <li>fixed grid wall drawing</li>
+          <li>fixed ship textures in level 13</li>
+          <li>improved graphics scaler performance</li>
+          <li>reduced CPU usage when using WildMIDI</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.2.4" date="2018-02-23">
+      <description>
+        <ul>
+          <li>added gouraud shading</li>
+          <li>added Conrad mocking voice files playback</li>
+          <li>added sound looping</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.2.3" date="2017-10-10">
+      <description>
+        <ul>
+          <li>fixed anikeyf hotspots with demo data files</li>
+          <li>fixed depth buffer usage when drawing bitmaps</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.2.2" date="2017-09-28">
+      <description>
+        <ul>
+          <li>fixed screenshots in save/load menu</li>
+          <li>added icon controls mode</li>
+          <li>added options for textures scaling</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.2.1" date="2017-09-02">
+      <description>
+        <ul>
+          <li>added save/load menu</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.2.0" date="2017-08-13">
+      <description>
+        <ul>
+          <li>added support for General MIDI music (via FluidSynth)</li>
+          <li>fixed 160p cinematics aspect ratio</li>
+          <li>fixed some visibility and occluding issues</li>
+          <li>fixed wildmidi.cfg drum set section</li>
+          <li>fixed music index 0 playback</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.1.9" date="2017-04-29">
+      <description>
+        <ul>
+          <li>added save/load</li>
+          <li>added support for GUS music (via WildMIDI)</li>
+          <li>added missing opcodes (drawNumber, setCamera, setPlayerObject)</li>
+          <li>added missing graphics (background, blob, cross_hole, shadows)</li>
+          <li>fixed cinematics with demo data files</li>
+          <li>fixed several engine issues (game is completable)</li>
+          <li>switched to SDL2</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.1.8" date="2013-02-23">
+      <description>
+        <ul>
+          <li>added GLES rendering (Android)</li>
+          <li>fixed lockup in level 1</li>
+          <li>fixed sound glitches</li>
+          <li>fixed missing cutscene subtitles</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.1.7" date="">
+      <description>
+        <ul>
+          <li>changed default texture scaler to 2x</li>
+          <li>fixed crashes in level 5</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.1.6" date="">
+      <description>
+        <ul>
+          <li>added support for demo data files</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.1.5" date="">
+      <description>
+        <ul>
+          <li>added missing sprites</li>
+          <li>fixed cutscene 0 playback</li>
+          <li>fixed sfx/voice playback volume</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.1.4" date="">
+      <description>
+        <ul>
+          <li>added viewport</li>
+          <li>fixed box objects selection</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.1.3" date="">
+      <description>
+        <ul>
+          <li>added texture upscaling</li>
+          <li>added extra hotkeys</li>
+          <li>added map</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.1.2" date="">
+      <description>
+        <ul>
+          <li>added HUD, inventory and box</li>
+          <li>added speech playback (cutscene and in-game)</li>
+          <li>added cutscene subtitles</li>
+          <li>added missing opcodes</li>
+          <li>changed default projection to match original game view</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.1.1" date="">
+      <description>
+        <ul>
+          <li>added background music in cutscenes</li>
+          <li>added sound effects</li>
+          <li>fixed cutscenes delay</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.1.0" date="">
+      <description>
+        <ul>
+          <li>initial release</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+  <content_rating type="oars-1.1">
+    <content_attribute id="violence-fantasy">moderate</content_attribute>
+  </content_rating>
+</component>
