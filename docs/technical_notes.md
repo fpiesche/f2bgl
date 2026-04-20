@@ -7,7 +7,7 @@ The executable contains debug strings meant to displayed over the game graphics.
 The code is toggled by a variable that cannot be set by the player in
 the demo or retail executables.
 
-```
+```asm
 cseg01:0002B468    cmp    _debug_messages, 0
 cseg01:0002B46F    jz     loc_2B6B4
 ```
@@ -29,7 +29,7 @@ screen (`@0xb0000`).
 The code detects the presence of the screen by writing a character and
 reading it back.
 
-```
+```asm
 cseg01:00014F45    mov     dx, 3B4h
 cseg01:00014F49    mov     al, 0Fh
 cseg01:00014F4B    out     dx, al
